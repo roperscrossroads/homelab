@@ -81,7 +81,7 @@ nodes:
         vip:
           ip: "10.0.0.100"
   - hostname: "talos04"
-    ipAddress: "10.0.0.60"
+    ipAddress: "10.0.0.53"
     installDisk: "/dev/sda"
     machineSpec:
       secureboot: false
@@ -92,7 +92,7 @@ nodes:
           hardwareAddr: "bc:24:11:70:97:30"
         dhcp: false
         addresses:
-          - "10.0.0.60/24"
+          - "10.0.0.53/24"
         routes:
           - network: "0.0.0.0/0"
             gateway: "10.0.0.1"
@@ -132,7 +132,7 @@ nodes:
             gateway: "10.0.0.1"
         mtu: 1500
   - hostname: "talos07"
-    ipAddress: "10.0.0.66"
+    ipAddress: "10.0.0.51"
     installDisk: "/dev/sda"
     machineSpec:
       secureboot: false
@@ -143,7 +143,7 @@ nodes:
           hardwareAddr: "bc:24:11:20:e2:a6"
         dhcp: false
         addresses:
-          - "10.0.0.66/24"
+          - "10.0.0.51/24"
         routes:
           - network: "0.0.0.0/0"
             gateway: "10.0.0.1"
