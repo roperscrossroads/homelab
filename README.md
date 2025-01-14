@@ -4,7 +4,7 @@ I like building platforms. I started work as an embedded software engineer out o
 
 I have worked with many different large, distributed systems. I like thinking about how systems can continue to operate when some parts experience failures. I worked on fire alarm panels for a number of years which required a lot of thought about how to make things fail gracefully (while buildings are on fire).
 
-I am building a kubernetes home lab (again) so I have a place to test things out and do research in different areas. It runs on a combination of VMs and baremetal systems (amd64 & arm64). Right now there are 10 nodes, 7 physical hosts and 64 CPU cores.
+I am building a kubernetes home lab (again) so I have a place to test things out and do research in different areas. It runs on a combination of VMs and baremetal systems (amd64 & arm64). Right now there are 11 nodes, 8 physical hosts and 68 CPU cores.
 
 ## Areas of Interest
 
@@ -28,15 +28,16 @@ I am building a kubernetes home lab (again) so I have a place to test things out
 
 I have set this cluster up so that some of the nodes come and go as desktop systems are turned on and off. When my daughter plays RDR2 on the gaming pc, the talos03 VM (a master node) and the talos08 VM (a worker node) are active. Likewise, my NixOS desktop runs a few worker VMs. When these systems are turned off, only the lower-power Intel N100 and Raspberry Pi4 systems remain active.
 
-| Host  | Arch  | CPU         | Cores | RAM   | K8s Masters | K8s Workers      | Non-K8s | Notes |
-|-------|-------|-------------|-------|-------|-------------|------------------|---------|-------|
-| nuc1  | amd64 | Intel N100  | 4     | 16 GB | talos01     |                  | ceph    |       |
-| nuc2  | amd64 | Intel N100  | 4     | 16 GB | talos02     |                  | ceph    |       |
-| nuc3  | amd64 | Intel N100  | 4     | 16 GB |             | talos04, talos05 | ceph    |       |
-| nixos | amd64 | AMD Ryzen 7 | 16    | 32 GB |             | talos06, talos07 |         | volatile |
-| gamer | amd64 | Intel i7    | 28    | 64 GB | talos03     | talos08          |         | volatile |
-| rpi1  | ARM   | Cortex-A72  | 4     | 4 GB  |             | talos09          |         |       |
-| rpi2  | ARM   | Cortex-A72  | 4     | 4 GB  |             | talos10          |         |       |
+| Host    | Arch  | CPU        | Cores | RAM   | K8s Masters | K8s Workers  | Non-K8s | Notes    |
+|---------|-------|------------|-------|-------|-------------|--------------|---------|----------|
+| nuc1    | amd64 | Intel N100 | 4     | 16 GB | talos01     |              | ceph    |          |
+| nuc2    | amd64 | Intel N100 | 4     | 16 GB | talos02     |              | ceph    |          |
+| nuc3    | amd64 | Intel N100 | 4     | 16 GB |             | talos04 & 05 | ceph    |          |
+| nixos   | amd64 | Ryzen 7    | 16    | 32 GB |             | talos06 & 07 |         | volatile |
+| gamer   | amd64 | Intel i7   | 28    | 64 GB | talos03     | talos08      |         | volatile |
+| rpi4 #1 | arm64 | Cortex-A72 | 4     | 4 GB  |             | talos09      |         |          |
+| rpi4 #2 | arm64 | Cortex-A72 | 4     | 4 GB  |             | talos10      |         |          |
+| rpi4 #3 | arm64 | Cortex-A72 | 4     | 8 GB  |             | talos11      |         |          |
 
 ## Nodes
 
@@ -52,6 +53,22 @@ I have set this cluster up so that some of the nodes come and go as desktop syst
 | talos08 | worker | 12   | 8GB | VM        | volatile |
 | talos09 | worker | 4    | 4GB | baremetal |          |
 | talos10 | worker | 4    | 4GB | baremetal |          |
+| talos11 | worker | 4    | 8GB | baremetal |          |
+
+
+## Future
+
+There are a lot of interesting projects that I would like to explore. I am going to try to use these in some way within my homelab:
+
+- [vcluster](https://github.com/loft-sh/vcluster) - Create fully functional virtual Kubernetes clusters
+- [kcp](https://github.com/kcp-dev/kcp) - Kubernetes-like control planes for form-factors and use-cases beyond Kubernetes and container workloads
+- [KubeVirt](https://github.com/kubevirt/kubevirt) - A virtual machine management add-on for Kubernetes
+- [k8sgpt](https://github.com/k8sgpt-ai/k8sgpt) - A tool for scanning your Kubernetes clusters, diagnosing, and triaging issues in simple English
+- [Tinkerbell](https://github.com/tinkerbell) - A flexible bare metal provisioning engine
+- [NixOS](https://github.com/nixos) - Declarative builds and deployments
+- [Proxmox on NixOS](https://github.com/SaumonNet/proxmox-nixos) - The Proxmox Hypervisor, on NixOS
+- [KubeEdge](https://kubeedge.io/) - Kubernetes Native Edge Computing Framework
+- [Kairos](https://github.com/kairos-io/kairos) - The immutable Linux meta-distribution for edge Kubernetes
 
 ## Thanks
 
