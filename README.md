@@ -4,7 +4,7 @@ I like building platforms. I started work as an embedded software engineer out o
 
 I have worked with many different large, distributed systems. I like thinking about how systems can continue to operate when some parts experience failures. I worked on fire alarm panels for a number of years which required a lot of thought about how to make things fail gracefully (while buildings are on fire).
 
-I am building a kubernetes home lab (again) so I have a place to test things out and do research in different areas. It runs on a combination of VMs and baremetal systems (amd64 & arm64). Right now there are 11 nodes, 8 physical hosts and 68 CPU cores.
+I am building a kubernetes home lab (again) so I have a place to test things out and do research in different areas. It runs on a combination of VMs and baremetal systems (amd64 & arm64). Right now there are 12 nodes, 9 physical hosts and 72 CPU cores.
 
 ## Areas of Interest
 
@@ -38,6 +38,8 @@ I have set this cluster up so that some of the nodes come and go as desktop syst
 | rpi4 #1 | arm64 | Cortex-A72 | 4     | 4 GB  |             | talos09      |         |          |
 | rpi4 #2 | arm64 | Cortex-A72 | 4     | 4 GB  |             | talos10      |         |          |
 | rpi4 #3 | arm64 | Cortex-A72 | 4     | 8 GB  |             | talos11      |         |          |
+| rpi4 #4 | arm64 | Cortex-A72 | 4     | 4 GB  |             | talos12      |         |          |
+
 
 ## Nodes
 
@@ -54,7 +56,7 @@ I have set this cluster up so that some of the nodes come and go as desktop syst
 | talos09 | worker | 4    | 4GB | baremetal |          |
 | talos10 | worker | 4    | 4GB | baremetal |          |
 | talos11 | worker | 4    | 8GB | baremetal |          |
-
+| talos12 | worker | 4    | 4GB | baremetal |          |
 
 ## Future
 

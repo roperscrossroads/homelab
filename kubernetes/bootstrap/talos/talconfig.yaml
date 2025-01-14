@@ -216,6 +216,23 @@ nodes:
           - network: "0.0.0.0/0"
             gateway: "10.0.0.1"
         mtu: 1500
+  - hostname: "talos12"
+    ipAddress: "10.0.0.47"
+    installDisk: "/dev/sda"
+    machineSpec:
+      secureboot: false
+    talosImageURL: factory.talos.dev/installer/ee21ef4a5ef808a9b7484cc0dda0f25075021691c8c09a276591eedb638ea1f9
+    controlPlane: false
+    networkInterfaces:
+      - deviceSelector:
+          hardwareAddr: "dc:a6:32:89:12:29"
+        dhcp: false
+        addresses:
+          - "10.0.0.47/24"
+        routes:
+          - network: "0.0.0.0/0"
+            gateway: "10.0.0.1"
+        mtu: 1500
 
 # Global patches
 patches:
