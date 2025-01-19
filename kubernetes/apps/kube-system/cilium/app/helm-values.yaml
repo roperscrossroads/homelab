@@ -4,6 +4,9 @@ bpf:
   masquerade: true
   # Ref: https://github.com/siderolabs/talos/issues/10002
   hostLegacyRouting: true
+cni:
+  # Required for pairing with Multus CNI
+  exclusive: false
 cgroup:
   automount:
     enabled: false
@@ -57,6 +60,8 @@ securityContext:
       - IPC_LOCK
       - SYS_ADMIN
       - SYS_RESOURCE
+      - PERFMON
+      - BPF
       - DAC_OVERRIDE
       - FOWNER
       - SETGID
@@ -67,7 +72,3 @@ securityContext:
       - SYS_RESOURCE
 socketLB:
   hostNamespaceOnly: true
-# Graceful Helmfile to HelmRelease takeover
-commonLabels:
-  helm.toolkit.fluxcd.io/name: cilium
-  helm.toolkit.fluxcd.io/namespace: kube-system
