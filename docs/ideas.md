@@ -1,5 +1,12 @@
-## Malware Detection & Vulnerabilty Scanning
+## Securing Software Supply Chains
 
+- https://github.com/cdfoundation/CICD-Cybersecurity
+- https://notaryproject.dev/
+- https://github.com/sigstore
+
+## Malware Detection, Vulnerabilty Scanning, Handling Secrets
+
+- https://github.com/gitleaks/gitleaks
 - https://github.com/chainguard-dev/malcontent
 - https://github.com/ossillate-inc/packj
 - https://github.com/anchore/grype
@@ -16,6 +23,11 @@
 - https://github.com/DevSecNinja/home
 - https://github.com/returnfloat/homelab
 - https://github.com/khuedoan/homelab
+
+## Security Misc
+
+- https://openssf.org/
+- https://spectralops.io/blog/top-9-git-secret-scanning-tools/
 
 ## Unsorted
 
