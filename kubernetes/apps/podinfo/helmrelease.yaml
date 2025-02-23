@@ -18,8 +18,8 @@ spec:
     createNamespace: true
   values:
     ui:
-      message: "HI"
-    replicaCount: 2
+      message: "Hello"
+    replicaCount: 5
     ingress:
       enabled: true
       className: "external"
