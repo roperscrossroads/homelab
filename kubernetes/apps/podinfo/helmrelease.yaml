@@ -17,6 +17,8 @@ spec:
   install:
     createNamespace: true
   values:
+    ui:
+      message: "HI"
     replicaCount: 2
     ingress:
       enabled: true
