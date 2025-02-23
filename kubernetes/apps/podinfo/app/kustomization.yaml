@@ -6,7 +6,3 @@ metadata:
   namespace: podinfo
 resources:
   - ./helmrelease.yaml
-configMapGenerator:
-  - name: podinfo-values
-    files:
-      - values.yaml=podinfo-values.yaml
