@@ -6,7 +6,7 @@ metadata:
   namespace: podinfo
 spec:
   interval: 30m0s
-  path: ./app
+  path: ./app/kustomization.yaml
   prune: true
   retryInterval: 2m0s
   sourceRef:
