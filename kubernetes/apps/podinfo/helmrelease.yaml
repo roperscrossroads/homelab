@@ -20,7 +20,7 @@ spec:
     replicaCount: 2
     ingress:
       enabled: true
-      className: "nginx"
+      className: "external"
       additionalLabels: {}
       annotations:
         cert-manager.io/cluster-issuer: "letsencrypt-production"
