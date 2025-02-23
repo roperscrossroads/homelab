@@ -6,7 +6,7 @@ metadata:
   namespace: podinfo
 spec:
   interval: 30m0s
-  path: ./app/kustomization.yaml
+  path: ./kubernetes/apps/podinfo/app
   prune: true
   retryInterval: 2m0s
   sourceRef:
